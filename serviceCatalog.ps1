@@ -2,7 +2,7 @@ $serviceName = "teams-integration";
 
 $body = @"
 {
-    service(name: "$($serviceName)"){
+    service(name: "$($env:GH_SERVICE)"){
     id,
     name,
     maintainer {
@@ -15,7 +15,7 @@ $body = @"
           name,
           description,
           
-          scorecardSummaries(serviceName: "$($serviceName)", first: 1){
+          scorecardSummaries(serviceName: "$($env:GH_SERVICE)", first: 1){
             nodes{
               score,
               maxScore,

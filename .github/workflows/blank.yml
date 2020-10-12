@@ -40,7 +40,7 @@ jobs:
         with:
           repoName: gsaraldemo/Ecosystem-Template-Repository
           branchName: master
-          data: '{ "message" : ${{ steps.psscript.outputs.scorecard }} }'
+          data: '{ "message" : ${{ steps.main-script.outputs.scorecard }} }'
           templateType: HandleBars
           sourceType: CatalogScoreCard
           ClientType: Teams

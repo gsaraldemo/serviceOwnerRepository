@@ -34,4 +34,5 @@ $header = @{
 } 
 
 
-Invoke-RestMethod -Uri "https://catalog.githubapp.com/graphql" -Method 'Post' -Body $body -Headers $header | ConvertTo-JSON
+$resultJson = Invoke-RestMethod -Uri "https://catalog.githubapp.com/graphql" -Method 'Post' -Body $body -Headers $header | ConvertTo-Json  -Depth 10 -Compress
+$resultJson

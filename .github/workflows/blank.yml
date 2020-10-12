@@ -33,5 +33,5 @@ jobs:
           $result = &.\serviceCatalog.ps1
           echo "::set-output name=scorecard::$result"
         env:
-          AZURE_DEVOPS_EXT_PAT: ${{ secrets.SERVICE_CATALOG_TOKEN }}
+          SERVICE_CATALOG_TOKEN: ${{ secrets.SERVICE_CATALOG_TOKEN }}
 

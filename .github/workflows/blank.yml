@@ -34,4 +34,14 @@ jobs:
           echo "::set-output name=scorecard::$result"
         env:
           SERVICE_CATALOG_TOKEN: ${{ secrets.SERVICE_CATALOG_TOKEN }}
+          
+      - name: Push Notification
+        uses: ProtocolRedefined/Dynamic-Template-Engine@master
+        with:
+          repoName: gsaraldemo/Ecosystem-Template-Repository
+          branchName: master
+          data: '{ "message" : ${{ steps.psscript.outputs.scorecard }} }'
+          templateType: HandleBars
+          sourceType: CatalogScoreCard
+          ClientType: Teams
 

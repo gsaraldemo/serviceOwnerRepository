@@ -33,7 +33,7 @@ function GetScoreCardsForService ([string]$service) {
 "@
 
 $header = @{
- "Authorization"="Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6ODIwLCJzdWIiOiJnYXVyYXZzYXJhbE1zIiwiaWF0IjoxNjAyNDc3ODcwfQ.I4YauYkQKxUCKyq6cJHLmgSHM80L16BHov0gSui_5Oo"
+ "Authorization"="Bearer $($env:SERVICE_CATALOG_TOKEN)"
 } 
 
 

@@ -16,9 +16,6 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: windows-latest
-    strategy:
-      matrix:
-        gh-service: ["teams-integration", "slack-integration"]
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -36,7 +33,6 @@ jobs:
           echo "::set-output name=scorecard::$result"
         env:
           SERVICE_CATALOG_TOKEN: ${{ secrets.SERVICE_CATALOG_TOKEN }}
-          GH_SERVICE: ${{ matrix.gh-service }}
           
       - name: Push Notification
         uses: ProtocolRedefined/Dynamic-Template-Engine@master

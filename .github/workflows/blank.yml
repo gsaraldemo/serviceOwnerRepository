@@ -51,6 +51,6 @@ jobs:
           branchName: master
           data: '{ "message" : ${{ steps.main-script.outputs.scorecard }} }'
           templateType: HandleBars
-          sourceType: CatalogScoreCard1
-          ClientType: Teams
+          sourceType: CatalogScoreCard
+          ClientType: Slack
 

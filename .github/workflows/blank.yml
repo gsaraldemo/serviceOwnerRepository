@@ -52,5 +52,5 @@ jobs:
           data: '{ "message" : ${{ steps.main-script.outputs.scorecard }} }'
           templateType: HandleBars
           sourceType: CatalogScoreCard
-          ClientType: Slack
+          ClientType: Teams
 

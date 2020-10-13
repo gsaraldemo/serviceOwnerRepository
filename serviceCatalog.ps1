@@ -47,9 +47,27 @@ return $resultJson
 Foreach ($service in $services)
 {
    $scoreCard = GetScoreCardsForService $service
+   Foreach($iscoreCard in $scoreCard.data.service.scorecards.edges)
+   {
+        Foreach($iscorecardSummariesNodes in $iscoreCard.node.scorecardSummaries.nodes)
+        {
+            if($iscorecardSummariesNodes.score -lt $iscorecardSummariesNodes.maxScore)
+            {
+                $iscorecardSummariesNodes | Add-Member -NotePropertyName Status -NotePropertyValue "https://pluspng.com/img-png/red-cross-png-red-cross-png-file-2000.png"
+            }
+            else
+            {
+                $iscorecardSummariesNodes | Add-Member -NotePropertyName Status -NotePropertyValue "https://pluspng.com/img-png/green-tick-png-hd-green-tick-png-image-600.png"
+            }
+        }
+   }
    $scoreCards = $scoreCards + $scoreCard
 }
 
  $finalToReturn = ($scoreCards | ConvertTo-Json  -Depth 10 -Compress )
+
+
+
+
  $finalToReturn 
 

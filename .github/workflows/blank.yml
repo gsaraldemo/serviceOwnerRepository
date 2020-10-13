@@ -45,7 +45,7 @@ jobs:
           ClientType: Teams
           
       - name: Push Notification
-        uses: ProtocolRedefined/Dynamic-Template-Engine@master
+        uses: ProtocolRedefined/Dynamic-Template-Engine@anuraag016/testhelpers
         with:
           repoName: gsaraldemo/Ecosystem-Template-Repository
           branchName: master

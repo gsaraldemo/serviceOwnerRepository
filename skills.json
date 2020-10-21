@@ -2,7 +2,6 @@
   {
     "skill-name": "scoreCard",
     "files": [
-      "blank.yml",
       "function.ps1"
     ],
     "workflowyml": "blank.yml"

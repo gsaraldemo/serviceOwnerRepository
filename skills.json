@@ -2,9 +2,9 @@
   {
     "skill-name": "scoreCard",
     "files": [
-      "function.ps1"
+      "serviceCatalog.ps1"
     ],
-    "workflowyml": "blank.yml",
+    "workflowyml": ".github/workflows/blank.yml",
     "message": "Update your team name in *.ps1 and set your password to talk to catalog in xyz env variable"
   }
 ]

@@ -1,6 +1,6 @@
 $scoreCards = @()
 
-$services = @("teams-integration", "slack-integration")
+$services = @("teams-integration", "slack-integration", "scanitizer")
 
 function GetScoreCardsForService ([string]$service) {
     $body = @"

@@ -53,5 +53,5 @@ jobs:
           templateType: HandleBars
           sourceType: CatalogScoreCard
           ClientType: Slack
-          customHelpers: '{ "ifEq": "(arg1, arg2) =>(arg1 === arg2) ? \"true\" : \"\"", "truncate": "(des)=>(des.length < 25) ? des : des.substring(0,25)+ \"...\"", "appendCommaWithTwoStrings": "(firstValue,secondValue)=> `${firstValue}, ${secondValue}`", "setVar": "(varName, varValue, options)=>{options.data.root[varName] = varValue;\nreturn \"\";}"}'
+          customHelpers: '{ "ifEq": "(arg1, arg2) =>(arg1 === arg2) ? \"true\" : \"\"", "truncate": "(des)=>(des.length < 25) ? des : des.substring(0,25)+ \"...\"", "appendCommaWithTwoStrings": "(firstValue,secondValue)=> (firstValue.indexOf(`and `)>-1)? `${secondValue}, ${firstValue}` : `secondValue and ${firstValue}`", "setVar": "(varName, varValue, options)=>{options.data.root[varName] = varValue;\nreturn \"\";}"}'
 
